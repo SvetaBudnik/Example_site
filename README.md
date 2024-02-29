@@ -6,3 +6,7 @@ https://www.figma.com/file/INxP7ySpRbM1XaezV3AI58/JS_feature?type=design&node-id
 Ссылка на документ с ТЗ к фиче с диалоговым окном в тестовых заданиях:
 
 https://docs.google.com/document/d/1FqYXBuwXtJiFhRtx8Zo_W4NFBkF_HnbeTuPpE8rXv30/edit?usp=sharing
+
+Ссылка на сайт:
+
+https://svetabudnik.github.io/Example_site/
