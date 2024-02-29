@@ -38,9 +38,12 @@ function openModal(label) {
     var text = document.getElementById('modal-field');
     text.textContent = label;
     
-
     var modal = document.getElementById('myModal');
     modal.style.display = 'block';
+
+    setTimeout(function() {
+        closeModal();
+    }, 3000);
 }
 
 function closeModal() {
