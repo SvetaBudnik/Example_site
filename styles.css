@@ -228,6 +228,8 @@
     background-color: #2ecc71;
     text-align: center;
     color: #000000;
+
+    cursor: pointer;
 }
 
 .correct {
