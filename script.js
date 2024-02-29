@@ -18,11 +18,11 @@ function checkAnswers() {
         selectedButton.classList.remove('selected');
         if (selectedButton.textContent === correctAnswer) {
             selectedButton.classList.add('correct');
-            window.alert("Ты молодец, так держать !");
+            openModal('Ты молодец, так держать !');
 
         } else {
             selectedButton.classList.add('incorrect');
-            window.alert("К сожалению ты ошибся :(");
+            openModal('К сожалению ты ошибся :(');
         }
     }
 
@@ -34,3 +34,16 @@ function checkAnswers() {
     });
 }
 
+function openModal(label) {
+    var text = document.getElementById('modal-field');
+    text.textContent = label;
+    
+
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}

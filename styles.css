@@ -243,6 +243,28 @@
 }
 
 
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 15px;
+
+}
+
+.modal-content {
+    background-color:#F0E8BB;
+    margin: 20% auto;
+    width: 50%;
+
+    text-align: center;
+    padding: 10px; 
+}
+
 #next_task {
     width: 143px;
     height: 52px;
