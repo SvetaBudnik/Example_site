@@ -206,7 +206,6 @@
 }
 
 
-
 .function_buttons {
     display: flex;
     flex-direction: row;
@@ -230,6 +229,17 @@
     text-align: center;
     color: #000000;
 }
+
+.correct {
+    background-color: #78F06D; /* Зеленый цвет для правильного ответа */
+    color:#000000;
+}
+
+.incorrect {
+    background-color: #F00F0F; /* Красный цвет для неверного ответа */
+    color: #000000;
+}
+
 
 #next_task {
     width: 143px;
