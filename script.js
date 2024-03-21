@@ -1,52 +1,58 @@
-function checkAnswer(button) {
-    // Отменяем подсветку для всех кнопок
-    var but = document.querySelectorAll('.but');
-    but.forEach(function (but) {
-        but.classList.remove('selected');
-    });
+const app = Vue.createApp({
+    data() {
+        return {
+            correctAnswer: "Из тегов и контента",
+            isModalVisible: false,
+            modalMessage: "",
+            canPerformClick: true,
+        };
+    },
+    methods: {
+        checkAnswer(answer, event) {
+            if (!this.canPerformClick) return;
 
-    // Подсвечиваем выбранную кнопку
-    button.classList.add('selected');
+            const selectedButton = event.target;
+            const buttons = document.querySelectorAll('.but');
+            buttons.forEach(button => button.classList.remove('selected'));
+            selectedButton.classList.add('selected');
 
-}
+        },
+        checkAnswers() {
+            if (!this.canPerformClick) return; // Строка, которая блокирует повторную проверку ответа
+            this.canPerformClick = false;
 
-function checkAnswers() {
-    var correctAnswer = " Из тегов и контента "; // Здесь нужно указать правильный ответ
+            const selectedButton = document.querySelector('.but.selected');
+            if (selectedButton) {
+                selectedButton.classList.remove('selected');
+            }
 
-    var selectedButton = document.querySelector('.but.selected');
-    if (selectedButton) {
-        selectedButton.classList.remove('selected');
-        if (selectedButton.textContent === correctAnswer) {
-            selectedButton.classList.add('correct');
-            openModal('Ты молодец, так держать !');
+            if (selectedButton.textContent === this.correctAnswer) {
+                this.openModal('Ты молодец, так держать !');
+            } else {
+                selectedButton.classList.add('incorrect');
+                this.openModal('К сожалению ты ошибся :(');
+            }
 
-        } else {
-            selectedButton.classList.add('incorrect');
-            openModal('К сожалению ты ошибся :(');
-        }
+            const allButtons = document.querySelectorAll('.but');
+            allButtons.forEach(button => {
+                if (button.textContent === this.correctAnswer) {
+                    button.classList.add('correct');
+                }
+            });
+        },
+        openModal(label) {
+            this.modalMessage = label;
+            this.isModalVisible = true;
+            console.log(this.isModalVisible);
+            setTimeout(() => {
+                this.closeModal();
+                console.log(this.isModalVisible);
+            }, 5000);
+        },
+        closeModal() {
+            this.isModalVisible = false;
+        },
     }
+});
 
-    var allButtons = document.querySelectorAll('.but');
-    allButtons.forEach(function (but) {
-        if (but.textContent === correctAnswer) {
-            but.classList.add('correct');
-        }
-    });
-}
-
-function openModal(label) {
-    var text = document.getElementById('modal-field');
-    text.textContent = label;
-    
-    var modal = document.getElementById('myModal');
-    modal.style.display = 'block';
-
-    setTimeout(function() {
-        closeModal();
-    }, 3000);
-}
-
-function closeModal() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = 'none';
-}
+app.mount('#app');

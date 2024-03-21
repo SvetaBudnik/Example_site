@@ -92,57 +92,6 @@
 } */
 
 
-.card_1 {
-    width: 800px;
-    height: 270px;
-    background: #8ab6e0;
-    border-radius: 42px;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-
-    
-    box-shadow: 0px 0px 15px #efefd0;
-}
-
-.ad_text {
-    text-align: center;
-    
-    color: rgb(247, 247, 247);
-    font-family: Arial, sans-serif;
-    margin-top: 40px;
-    margin-bottom: 0;
-
-}
-
-.text-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-grow: 1;
-}
-
-.simple_text {
-    text-align: center;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    margin: 0 50px;
-}
-
-.card_2 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.card_2 img {
-    box-shadow: 0px 0px 15px #efefd0;
-    border-radius: 24px;
-}
-
 .container {
     display: flex;
     justify-content: space-around;
@@ -243,9 +192,9 @@
 }
 
 
-/* Стили для модального окна */
+/* Ваши стили для модального окна */
 .modal {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     left: 50%;
@@ -253,17 +202,21 @@
     transform: translateX(-50%);
     width: 450px;
     height: 15px;
-
-}
-
-.modal-content {
+  }
+  
+  .modal-content {
     background-color:#F0E8BB;
-    margin: 20% auto;
+    margin: 21% auto;
     width: 50%;
 
     text-align: center;
     padding: 10px; 
-}
+  }
+  
+  .show-modal {
+    display: block;
+  }
+  
 
 #next_task {
     width: 143px;

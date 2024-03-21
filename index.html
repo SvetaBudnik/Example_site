@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title> Прототип модуля с использованием JS </title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/vue@3.2.20/dist/vue.global.prod.js"></script>
 </head>
 
 <body>
@@ -21,32 +22,36 @@
       </div>
     </header>
 
-  <section>
-    <!-- Пример тестового задания -->
-    <div class="container_course">
-      <div class="text_c"> <h2> Из чего состоит HTML элемент ? </h2></div>
-        <div class="ans">
-            <button class="but" onclick="checkAnswer(this)"> Из имени и угловых скобок </button>
-            <button class="but" onclick="checkAnswer(this)"> Из тегов и контента </button>
-            <button class="but" onclick="checkAnswer(this)"> Из открывающего и закрывающего тега </button>
-            <button class="but" onclick="checkAnswer(this)"> Нет верного ответа </button>
+    <section>
+      <!-- Пример тестового задания -->
+      <div class="container_course">
+        <div class="text_c">
+          <h2>Из чего состоит HTML элемент?</h2>
         </div>
-        <div class="function_buttons">
-                <button id="previos_task"> Предыдущее задание </button>
-                <button id="check_ans" onclick="checkAnswers()"> Проверить задание </button>
-                <button id="next_task"> Следующее задание </button>
-        </div>
-
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <p id="modal-field">Это модальное окно с сообщением.</p>
+        <div id="app">
+            <div class="ans">
+              <button class="but" @click="checkAnswer('Из имени и угловых скобок', $event)">Из имени и угловых скобок</button>
+              <button class="but" @click="checkAnswer('Из тегов и контента', $event)">Из тегов и контента</button>
+              <button class="but" @click="checkAnswer('Из открывающего и закрывающего тега', $event)">Из открывающего и закрывающего тега</button>
+              <button class="but" @click="checkAnswer('Нет верного ответа', $event)">Нет верного ответа</button>
+            </div>
+            <div class="function_buttons">
+              <button id="previos_task" @click="prevTask">Предыдущее задание</button>
+              <button id="check_ans" @click="checkAnswers">Проверить задание</button>
+              <button id="next_task" @click="nextTask">Следующее задание</button>
+            </div>
+            
+            <div class="modal" v-show="isModalVisible">
+              <div class="modal-content">
+                <p>{{ modalMessage }}</p>
+              </div>
             </div>
         </div>
-       
 
-    </div>
-    <script src="script.js"></script>
-  </section>
+      </div>
+
+      <script src="script.js"></script>
+    </section>
 
   <footer class="main-footer">
     <a class="logo"> SB academy </a>
