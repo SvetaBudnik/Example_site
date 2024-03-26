@@ -65,6 +65,254 @@
     font-size: 16px;
 }
 
+.first_words {
+    width: 1300px;
+    height: 500px;
+
+    margin: auto;
+    margin-top: 70px;
+    padding: 1px;
+}
+
+
+.text_f {
+    color: black;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 300;
+    word-wrap: break-word;
+    text-align: center;
+    justify-content: center;
+
+    width: 1300px;
+    height: 100px;
+}
+
+.first_buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 100px; /* Расстояние между кнопками */
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+}
+
+#click_but{
+    padding: 10px;
+
+    width: 215px;
+    height: 80px;
+    border-radius: 20px;
+    background: #BDF0B9;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color:#000000;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+
+    /* justify-content: center;
+    align-items: center;
+
+    color: #000000;
+    background-color: #BDF0B9; */
+}
+
+
+
+/* #movingButton {
+    position: absolute;
+  } */
+
+.text_course{
+    width: 715px;
+    height: 60px;
+    border-radius: 20px;
+    background: #D9D9D9;
+    text-align: center;
+
+    margin: 15px auto;
+    padding: 15px 0;
+
+}
+
+.container_name_module li {
+    /* float: right;
+    display: block;
+    margin-right: 40px;
+
+    width: 180px;
+    height: 18px; */
+    /* font-family: Arial, sans-serif; */
+    /* border-radius: 10px;
+    padding: 10px 16px; */
+    cursor: pointer;
+
+    text-align: center;
+
+    display: inline-block; /* изменено */
+    margin-right: 40px;
+
+}
+
+.container_name_module h2 {
+    white-space: nowrap; /* добавлено */
+    text-align: center;
+}
+
+/* .container_name_module a {
+    color: #080808;
+    text-decoration: none;
+    font-size: 16px;
+} */
+
+.container_name_module {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 100px; /* Отступ между элементами */
+
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin: 10px auto; /* Центрируем по горизонтали */
+
+    justify-content:space-around;
+    /* align-items: center; */
+    list-style-type: none;
+
+    /* width: 1215px;
+    height: 40px; */
+    background: #D9D9D9;
+    text-align: center;
+
+    /* margin: 15px auto;
+    padding: 15px 0; */
+}
+
+
+.right-text {
+    margin-right: 100px;
+}
+
+.left-text {
+    margin-left: 10px;
+}
+
+.container_topic {
+    display: grid;
+    grid-template-columns: auto auto; /* Два столбца */
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 20px; /* Отступ между элементами */
+
+    max-width: 1210px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем по горизонтали */
+  }
+  
+  .topic-info {
+    flex: 1;
+  }
+  
+  .topic-actions {
+    margin-left: 10px; 
+  }
+  
+
+.c_topic{
+    /* display: block;
+    justify-content:space-between; */
+    /* align-items: center; */
+    list-style-type: none;
+/* 
+    width: 595px;
+    height: 112px; */
+    
+    /* text-align: center; */
+
+    margin: 0;
+}
+
+.c_topic li{
+    text-align: center;
+}
+
+/* .text_topic {
+    margin-right: 0;
+  } */
+
+.button-row {
+    display: grid;
+    
+    grid-template-columns: repeat(3, auto); /* Три столбца для трех кнопок */
+    justify-content: end; /* Центрируем содержимое по горизонтали */
+    gap: 40px; /* Отступ между кнопками */
+    grid-column: 2; /* Размещаем кнопки во втором столбце */
+    
+  }
+  
+  .button_teor {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px black solid;
+
+
+    background-color: #96A2E2;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button_task {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px black solid;
+
+
+    background-color: #D6EADB;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .button_practice {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px black solid;
+
+
+    background-color: #F0EDB9;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .button:last-child {
+    margin-right: 0;
+  }
+  
+  .custom-hr {
+    /* margin-left: 27px;
+    margin-right: 27px; */
+
+    margin: 20px 0; /* Задаем отступы */
+    border: none; /* Убираем стандартные границы */
+    border-top: 1px solid #000000; /* Устанавливаем стиль верхней границы */
+}
+
+
+
+/* Стили для кнопки с перемещением */
 
 /* .button-group {
     display: inline-flex;
@@ -102,12 +350,12 @@
 }
 
 .container_course {
-    width: 1142px;
-    height: 500px;
-    border-radius: 42px;
-    background: rgba(217, 217, 217, 0.17);
+    width: 1287px;
+    height: 620px;
+    border-radius: 10px;
+    background: #EEEDED;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 10px;
     padding: 1px;
 }
 
