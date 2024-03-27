@@ -128,6 +128,11 @@
     position: absolute;
   } */
 
+.number_task{
+    margin-left: 150px;
+    font-size: 25px;
+}
+
 .text_course{
     width: 715px;
     height: 60px;
@@ -304,7 +309,7 @@
   .custom-hr {
     /* margin-left: 27px;
     margin-right: 27px; */
-
+    grid-column: 1/3;
     margin: 20px 0; /* Задаем отступы */
     border: none; /* Убираем стандартные границы */
     border-top: 1px solid #000000; /* Устанавливаем стиль верхней границы */
@@ -360,13 +365,16 @@
 }
 
 .text_c {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+
     color: black;
     font-size: 20px;
     font-family: Inter;
     font-weight: 300;
     word-wrap: break-word;
-    text-align: center;
-    justify-content: center;
 
     width: 1142px;
     height: 100px;
@@ -376,8 +384,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px; /* Расстояние между кнопками */
+
     justify-content: center;
     align-items: center;
+
+    margin: 40px 0px 20px 0px ;
+    /* margin-top: 40px; */
 }
 
 .but{
@@ -395,8 +407,6 @@
     cursor: pointer;
 }
 
-
-
 .but.selected {
     background-color: #9FA3AC;
     color: black;
@@ -408,15 +418,22 @@
     flex-direction: row;
 
     justify-content: space-around;
-    margin-top: 35px;
+    margin-top: 60px;
 }
 
 #previos_task {
     width: 143px;
     height: 52px;
     background-color: #F0EDB9;
-    text-align: center;
+    
     color: #000000;
+    border: 2px black solid;
+    cursor: pointer;
+
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+    overflow-wrap: break-word;
 }
 
 #check_ans {
@@ -440,7 +457,7 @@
 }
 
 
-/* Ваши стили для модального окна */
+/* Стили для модального окна */
 .modal {
     /* display: none; */
     position: fixed;
@@ -470,8 +487,16 @@
     width: 143px;
     height: 52px;
     background-color: #F0EDB9;
-    text-align: center;
     color: #000000;
+    border: 2px black solid;
+    cursor: pointer;
+
+    text-align: center;
+    line-height: 52px;
+    text-decoration: none;
+
+    /* Перенос слов */
+    overflow-wrap: break-word;
 }
 
 .main-footer {
