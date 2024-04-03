@@ -1,12 +1,7 @@
-# Example_site
-Макет сайта был создан с помощью Фигма:
+# Vue 3 + Vite
 
-https://www.figma.com/file/INxP7ySpRbM1XaezV3AI58/JS_feature?type=design&node-id=0%3A1&mode=dev&t=FOqi3g0XTVWfXx2c-1
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Ссылка на документ с ТЗ к фиче с диалоговым окном в тестовых заданиях:
+## Recommended IDE Setup
 
-https://docs.google.com/document/d/1FqYXBuwXtJiFhRtx8Zo_W4NFBkF_HnbeTuPpE8rXv30/edit?usp=sharing
-
-Ссылка на сайт:
-
-https://svetabudnik.github.io/Example_site/
+- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur

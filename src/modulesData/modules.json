@@ -1,0 +1,42 @@
+{
+    "data": [
+        {
+            "moduleNumber": 1,
+            "moduleTitle": "Модуль 1",
+            "moduleName": "Название первого модуля",
+            "lessons": [
+                {
+                    "lessonNumber": 1,
+                    "lessonTitle": "Тема 1",
+                    "lessonName": "Название первой темы",
+                    "teorHtmlRef": "/lessons/1/1",
+                    "testHtmlRef": "/tests/1/1/1",
+                    "practHtmlRef": ""
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "moduleTitle": "Модуль 2",
+            "moduleName": "Название второго модуля",
+            "lessons": [
+                {
+                    "lessonNumber": 1,
+                    "lessonTitle": "Тема 1",
+                    "lessonName": "Название первой темы",
+                    "teorHtmlRef": "/lessons/2/1",
+                    "testHtmlRef": "",
+                    "practHtmlRef": ""
+                },
+                {
+                    "lessonNumber": 2,
+                    "lessonTitle": "Тема 2",
+                    "lessonName": "Название второй темы",
+                    "teorHtmlRef": "",
+                    "testHtmlRef": "",
+                    "practHtmlRef": ""
+                }
+            ]
+        }
+    ]
+}
